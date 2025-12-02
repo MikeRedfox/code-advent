@@ -1,4 +1,4 @@
-from utils import get_data
+VVfrom utils import get_data
 
 def part1(filepath: str):
     data = get_data(filepath)[0].split(",")
