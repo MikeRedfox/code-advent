@@ -24,6 +24,7 @@ pub fn part1(filepath: &str) -> i64 {
     s
 }
 
+#[allow(unused)]
 pub fn part2(filepath: &str) -> i64 {
     let binding = get_data(filepath);
     let data: Vec<&str> = binding[0].split(",").collect();

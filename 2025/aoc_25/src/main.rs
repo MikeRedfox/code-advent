@@ -1,4 +1,6 @@
 mod days;
 fn main() {
-    println!("{}", days::day02::part2("../inputs/2.txt"))
+    // days::day03::part2("../inputs/3_sample.txt");
+
+    println!("{}", days::day03::part2("../inputs/3.txt"));
 }
