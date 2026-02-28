@@ -1,0 +1,40 @@
+
+kjk:::qqqqqweqweewqimport math
+from utils import get_data
+
+def part1(filepath: str):
+    data = get_data(filepath)
+    wheel = 50
+    result = 0
+    for i in data:
+        n = int(i[1:])
+        if i[0] == "R":
+            wheel = (wheel + n) % 100
+        else:
+            wheel = (wheel - n) % 100
+        # print(wheel)
+        if wheel == 0:
+            result += 1
+    return result
+
+
+def part2(filepath: str):
+    data = get_data(filepath)
+    wheel = 50
+    result = 0
+    for i in data:
+        n = int(i[1:])
+        for j in range(n):
+            if i[0] == "R":
+                new  = (wheel + 1) % 100
+                wheel = new
+            else:
+                new = (wheel - 1) % 100
+                wheel = new
+            if wheel == 0:
+                result += 1
+    return result
+
+
+print(part2("./inputs/1_sample.txt") )
+print(part2("./inputs/1.txt") )
